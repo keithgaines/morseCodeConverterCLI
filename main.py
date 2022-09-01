@@ -22,4 +22,4 @@ letter = [i for i in lowercase_word]
 
 convert(letter)
 morse_output = ' '.join([str(item) for item in converted_morse])
-print(morse_output)
+print(f"'{word}' in morse code is {morse_output}")
