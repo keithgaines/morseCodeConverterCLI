@@ -6,4 +6,16 @@ morse = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', 
 
 converter_dict = {alphabet[i]: morse[i] for i in range(len(morse))}
 
-print(converter_dict) 
+
+word = input("Please enter a word: ")
+letter = [i for i in word]
+
+morse_list = [] 
+
+def convert(letter):
+    for i in letter:
+        letters = converter_dict[i]
+        morse_list.append(letters)
+
+convert(letter)
+print(morse_list)
