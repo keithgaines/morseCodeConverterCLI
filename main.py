@@ -16,7 +16,7 @@ def convert(letter):
 converter_dict = {alphabet[i]: morse[i] for i in range(0,26)}
 converted_morse = []
 
-word = input("Please enter a word: ")
+word = input("Please enter a word or phrase: ")
 lowercase_word = word.lower()
 letter = [i for i in lowercase_word]
 
