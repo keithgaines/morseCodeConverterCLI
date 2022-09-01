@@ -4,18 +4,18 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 morse = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..']
 
-converter_dict = {alphabet[i]: morse[i] for i in range(len(morse))}
 
+def convert(letter): 
+    for i in letter:
+        letters = converter_dict[i]
+        converted_morse.append(letters)
+
+converter_dict = {alphabet[i]: morse[i] for i in range(len(morse))}
+converted_morse = []
 
 word = input("Please enter a word: ")
 letter = [i for i in word]
 
-morse_list = [] 
-
-def convert(letter):
-    for i in letter:
-        letters = converter_dict[i]
-        morse_list.append(letters)
-
 convert(letter)
-print(morse_list)
+morse_output = ' '.join([str(item) for item in converted_morse])
+print(morse_output)
