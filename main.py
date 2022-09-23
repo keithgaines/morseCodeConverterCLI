@@ -21,5 +21,5 @@ lowercase_word = word.lower()
 letter = [i for i in lowercase_word]
 
 convert(letter)
-morse_output = ' '.join([str(item) for item in converted_morse])
+morse_output = '   '.join([str(item) for item in converted_morse])
 print(f"'{word}' in morse code is {morse_output}")
